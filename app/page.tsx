@@ -294,11 +294,25 @@ export default function Home() {
               Be the first to know when Igni launches. Join our waitlist for early access and exclusive deals.
             </p>
           </div>
-          <form className="max-w-md mx-auto flex gap-4">
+          <form 
+            className="max-w-md mx-auto flex gap-4"
+            name="waitlist"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="waitlist" />
+            <p className="hidden">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               className="flex-1 px-4 py-2 rounded-lg border border-input bg-background"
+              required
             />
             <button
               type="submit"
