@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 30 33% 99%;
+    --foreground: 24 12% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 12% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 12% 25%;
+    --primary: 24 94% 53%;
+    --primary-foreground: 30 33% 99%;
+    --secondary: 30 33% 96%;
+    --secondary-foreground: 24 12% 25%;
+    --muted: 30 33% 96%;
+    --muted-foreground: 24 5% 45%;
+    --accent: 24 94% 53%;
+    --accent-foreground: 30 33% 99%;
+    --destructive: 24 94% 53%;
+    --destructive-foreground: 30 33% 99%;
+    --border: 30 33% 93%;
+    --input: 30 33% 93%;
+    --ring: 24 94% 53%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+  transform-origin: center center;
+  padding: 0;
+  margin: 0;
+}
