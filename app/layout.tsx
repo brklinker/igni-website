@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Meet Igni',
   description: 'Shop items, not brands',
+  icons: {
+    icon: '/igni-mascot.png',
+  },
 };
 
 export default function RootLayout({
