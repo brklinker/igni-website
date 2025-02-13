@@ -3,8 +3,8 @@
 import { DollarSign, Search, Store, ShoppingCart, Laptop, Heart, FileText, X, MousePointer2, Sparkles } from "lucide-react";
 
 const FlameMascot = () => (
-  <div className="w-24 h-24 mx-auto mb-8 relative">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full animate-pulse">
+  <div className="w-24 h-30 mx-auto relative">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-40">
       <path
         d="M12 2C9.39 4.85 5.74 8.2 5.74 12.34C5.74 16.5 8.63 19.89 12 19.89C15.37 19.89 18.26 16.5 18.26 12.34C18.26 8.2 14.61 4.85 12 2Z"
         fill="url(#flame-gradient)"
@@ -17,7 +17,7 @@ const FlameMascot = () => (
         </linearGradient>
       </defs>
     </svg>
-    <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex gap-3">
+    <div className="absolute top-14 left-1/2 transform -translate-x-1/2 flex gap-3">
       <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
       <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
     </div>
@@ -139,13 +139,14 @@ export default function Home() {
 
           {/* Main Example */}
           <div className="max-w-4xl mx-auto bg-background rounded-xl shadow-xl overflow-hidden mb-12">
-            <div className="relative">
+            <div className="relative bg-background">
               <img 
                 src="furniture-example.png"
                 alt="Igni finding better furniture deals"
-                className="w-full rounded-t-xl"
+                className="w-full block"
+                style={{ verticalAlign: 'middle' }}
               />
-              <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="absolute bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 Save $200
               </div>
             </div>
@@ -192,9 +193,10 @@ export default function Home() {
               <img 
                 src="vpn-example.png"
                 alt="Igni comparing VPN services"
-                className="w-full rounded-t-xl"
+                className="w-full block"
+                style={{ verticalAlign: 'middle' }}
               />
-              <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
                 Feature Comparison
               </div>
             </div>
@@ -276,7 +278,7 @@ export default function Home() {
                 <div className="mt-6 pt-6 border-t border-border">
                   <div className="flex items-center gap-2 text-sm text-primary">
                     <span className="font-semibold">Knowledge:</span>
-                    <span>From experts and trusted sources</span>
+                    <span>From experts & trusted sources</span>
                   </div>
                 </div>
               </div>
